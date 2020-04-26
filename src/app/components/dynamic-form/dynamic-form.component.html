@@ -1,7 +1,7 @@
-<div>
+<div *ngIf="form!=undefined">
   <form (ngSubmit)="onSubmit()" [formGroup]="form">
 
-    <div *ngFor="let question of questions" class="form-row">
+    <div *ngFor="let question of _questions" class="form-row">
       <app-dynamic-form-control [question]="question" [form]="form"></app-dynamic-form-control>
     </div>
 

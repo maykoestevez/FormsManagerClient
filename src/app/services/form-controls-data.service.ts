@@ -18,12 +18,12 @@ export class FormControlDataService {
     }
 
     // TODO: get from a remote source of question metadata
-    async getQuestions() {
+     getQuestions() {
 
-      return  await this.http.get<Array<BaseControl<string>>>(`${this.baseUrl}FormControl`).toPromise();
+      return   this.http.get<Array<BaseControl<string>>>(`${this.baseUrl}FormControl`);
 
-            //return of(data.sort((a, b) => a.order - b.order));
-           // return data;
+          //   return of(data.sort((a, b) => a.order - b.order));
+          //  return data;
 
 
     }

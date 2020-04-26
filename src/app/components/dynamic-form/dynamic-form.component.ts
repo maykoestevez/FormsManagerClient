@@ -15,8 +15,8 @@ export class DynamicFormComponent implements OnInit {
   set questions(data) {
     if (data) {
       this.form = this.qcs.toFormGroup(data);
+      this._questions = data;
     }
-
   }
   _questions: Array<BaseControl<string>> = [];
   form: FormGroup;

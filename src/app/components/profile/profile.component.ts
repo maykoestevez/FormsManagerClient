@@ -9,7 +9,7 @@ import { BaseControl } from 'src/app/form-controls/base-control';
   styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent implements OnInit {
-  questions: Array<BaseControl<string>>;
+  questions: Observable<Array<BaseControl<string>>>;
 
   constructor(private service: FormControlDataService) {
     // const observable = service.getQuestions();
@@ -18,12 +18,12 @@ export class ProfileComponent implements OnInit {
     //   this.questions$ = of(data);
 
     // });
-    // this.questions =  this.service.getQuestions();
+     this.questions =  this.service.getQuestions();
     // console.log(this.questions);
   }
   async ngOnInit() {
-    const data = await this.service.getQuestions();
-    this.questions = data;
-    console.log(this.questions);
+    // const data = await this.service.getQuestions();
+    // this.questions = data;
+    // console.log(this.questions);
   }
 }
