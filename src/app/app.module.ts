@@ -11,6 +11,7 @@ import { DynamicFormControlComponent } from './components/dynamic-form-control/d
 import { ProfileComponent } from './components/profile/profile.component';
 import { FormControlDataService } from './services/form-controls-data.service';
 import { FormControlService } from './services/form-control.service';
+import { FormManagerModule } from './form-manager/form-manager.module';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FormControlService } from './services/form-control.service';
     BrowserModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormManagerModule
   ],
   providers: [FormControlDataService, FormControlService],
   bootstrap: [AppComponent]

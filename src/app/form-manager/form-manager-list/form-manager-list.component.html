@@ -1,0 +1,33 @@
+<h2>Lista de formularios</h2>
+
+<ul>
+    <li
+        (click)="GetFormById(forms.id)"
+        *ngFor="let forms of formsList"
+        class="select">
+        {{forms.name}}
+    </li>
+</ul>
+
+<hr>
+<div *ngIf="formControls">
+  <table>
+    <thead>
+        <th>Nombre</th>
+        <th>Tipo</th>
+        <th>Requerido</th>
+        <th>Orden</th>
+        <th>Opciones</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let control of formControls.formControls">
+            <td>{{control.label}}</td>
+            <td>{{control.controlType}}</td>
+            <td>{{control.required}}</td>
+            <td>{{control.order}}</td>
+            <td>{{getOptionsString(control.options)}}</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
