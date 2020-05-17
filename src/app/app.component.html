@@ -1,4 +1,21 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<app-form-manager-list></app-form-manager-list>
+<nz-layout>
+    <nz-header>
+        <div class="logo"></div>
+        <ul
+            nz-menu
+            nzTheme="dark"
+            nzMode="horizontal">
+            <li nz-menu-item>Forms CRUD</li>
+            <li nz-menu-item>Forms List</li>
+        </ul>
+    </nz-header>
+    <nz-content>
 
-<router-outlet></router-outlet>
+        <div class="inner-content">
+
+            <router-outlet></router-outlet>
+
+        </div>
+    </nz-content>
+    <nz-footer>By OKYAM</nz-footer>
+</nz-layout>
