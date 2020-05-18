@@ -13,8 +13,11 @@ import { FormControlDataService } from './services/form-controls-data.service';
 import { FormControlService } from './services/form-control.service';
 import { FormManagerModule } from './form-manager/form-manager.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NZ_I18N } from 'ng-zorro-antd/i18n';
+import { en_US } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
+import { NzLayoutModule } from 'ng-zorro-antd/layout';
 
 registerLocaleData(en);
 
@@ -32,9 +35,10 @@ registerLocaleData(en);
     HttpClientModule,
     FormManagerModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NzLayoutModule
   ],
-  providers: [FormControlDataService, FormControlService],
+  providers: [FormControlDataService, FormControlService, { provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
